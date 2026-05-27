@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Portfolio | Creative Professional</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface": "#0b1326",
+                      "secondary-fixed": "#6ffbbe",
+                      "on-secondary-container": "#00311f",
+                      "surface-bright": "#31394d",
+                      "primary-container": "#00f0ff",
+                      "secondary-container": "#00a572",
+                      "on-tertiary-container": "#715d00",
+                      "inverse-on-surface": "#283044",
+                      "on-tertiary-fixed-variant": "#554500",
+                      "on-surface": "#dae2fd",
+                      "on-tertiary-fixed": "#231b00",
+                      "surface-container-highest": "#2d3449",
+                      "on-background": "#dae2fd",
+                      "primary-fixed": "#7df4ff",
+                      "on-error-container": "#ffdad6",
+                      "on-surface-variant": "#b9cacb",
+                      "primary-fixed-dim": "#00dbe9",
+                      "outline-variant": "#3b494b",
+                      "on-tertiary": "#3b2f00",
+                      "tertiary-fixed": "#ffe179",
+                      "on-secondary-fixed-variant": "#005236",
+                      "inverse-surface": "#dae2fd",
+                      "error": "#ffb4ab",
+                      "outline": "#849495",
+                      "tertiary": "#fff5de",
+                      "surface-variant": "#2d3449",
+                      "surface-container-low": "#131b2e",
+                      "on-primary-container": "#006970",
+                      "surface-dim": "#0b1326",
+                      "tertiary-container": "#fed639",
+                      "error-container": "#93000a",
+                      "on-secondary": "#003824",
+                      "primary": "#dbfcff",
+                      "inverse-primary": "#006970",
+                      "on-error": "#690005",
+                      "secondary-fixed-dim": "#4edea3",
+                      "surface-container": "#171f33",
+                      "on-primary-fixed": "#002022",
+                      "surface-container-high": "#222a3d",
+                      "surface-container-lowest": "#060e20",
+                      "surface-tint": "#00dbe9",
+                      "on-primary": "#00363a",
+                      "on-primary-fixed-variant": "#004f54",
+                      "secondary": "#4edea3",
+                      "tertiary-fixed-dim": "#eac324",
+                      "on-secondary-fixed": "#002113",
+                      "background": "#0b1326"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "section-gap": "120px",
+                      "container-max": "1280px",
+                      "gutter": "24px",
+                      "margin-desktop": "64px",
+                      "unit": "8px",
+                      "margin-mobile": "24px"
+              },
+              "fontFamily": {
+                      "label-sm": ["Inter"],
+                      "headline-xl-mobile": ["Sora"],
+                      "body-lg": ["Inter"],
+                      "display-lg": ["Sora"],
+                      "body-md": ["Inter"],
+                      "label-md": ["Inter"],
+                      "headline-md": ["Sora"],
+                      "display-lg-mobile": ["Sora"],
+                      "headline-xl": ["Sora"]
+              },
+              "fontSize": {
+                      "label-sm": ["12px", {"lineHeight": "1", "fontWeight": "500"}],
+                      "headline-xl-mobile": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "display-lg": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "800"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                      "display-lg-mobile": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                      "headline-xl": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        body {
+            background-color: #0b1326;
+            color: #dae2fd;
+            scroll-behavior: smooth;
+        }
+        .glass-card {
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .text-glow {
+            text-shadow: 0 0 15px rgba(0, 219, 233, 0.3);
+        }
+        .project-card:hover .project-image {
+            transform: scale(1.05);
+        }
+        .project-card:hover {
+            border-color: #00dbe9;
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/70 backdrop-blur-xl border-b border-white/5 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 transition-all duration-300 ease-in-out">
+<div class="font-headline-md text-headline-md font-bold text-on-surface">Portfolio</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-label-md text-label-md hover:text-primary transition-colors duration-300" href="#work">Work</a>
+<a class="text-on-surface/60 font-medium font-label-md text-label-md hover:text-primary transition-colors duration-300" href="#about">About</a>
+<a class="text-on-surface/60 font-medium font-label-md text-label-md hover:text-primary transition-colors duration-300" href="#contact">Contact</a>
+</div>
+<button class="bg-primary-container text-on-primary-container px-6 py-2 rounded-lg font-label-md text-label-md font-bold hover:opacity-90 transition-opacity">
+            Hire Me
+        </button>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-40 mix-blend-luminosity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIcdkG7iqCCEWyampS20yv0r81P68kP5nw2TTDJzpqeM3Pl70vnE8qJoaHZ5Zzdb4YOSTJAdNsXZNeUB10SlFH-KE6Ev8UvyqTygWyQFVG3FpUEHW8DXflmFIFI8x2sMkixsNHCkLRnKPIeo3sBRWf_F5s1Pf4stvw6lB9ME1E0qzuoMYKgoXFequrM_A9ckDDozSXAG0q7JhM3XyuFHbbdRo8AIpJAKFDfIJHJ_gcpI0yBHyTNzzj2A7S1ZNu81mwQijVDmvStPE"/>
+<div class="absolute inset-0 bg-gradient-to-r from-surface via-surface/80 to-transparent"></div>
+</div>
+<div class="relative z-10 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
+<div class="max-w-3xl">
+<span class="inline-block px-4 py-1 rounded-full bg-primary-container/10 border border-primary-container/20 text-primary-fixed font-label-md text-label-md mb-6 uppercase tracking-widest">Available for projects</span>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg mb-6 text-glow">
+                        Transformando ideias em experiências digitais impecáveis.
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-10">
+                        Especialista em UI/UX Design e Desenvolvimento Frontend com foco em performance e estética. Elevando marcas através de arquitetura de informação e design minimalista.
+                    </p>
+<div class="flex gap-4">
+<a class="bg-primary-container text-on-primary-container px-8 py-4 rounded-xl font-label-md text-label-md font-bold transition-transform hover:scale-105 active:scale-95" href="#work">
+                            Ver Projetos
+                        </a>
+<a class="border border-primary-container text-primary-container px-8 py-4 rounded-xl font-label-md text-label-md font-bold transition-colors hover:bg-primary-container/10" href="#contact">
+                            Contato
+                        </a>
+</div>
+</div>
+</div>
+<!-- Floating Decorative Element -->
+<div class="absolute right-[-10%] top-[20%] w-[500px] h-[500px] bg-primary-container/5 blur-[120px] rounded-full pointer-events-none"></div>
+</section>
+<!-- Projects Grid Section -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="work">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div>
+<h2 class="font-headline-xl text-headline-xl mb-4">Projetos em Destaque</h2>
+<p class="text-on-surface-variant max-w-xl">Uma seleção curada de soluções digitais que unem funcionalidade técnica e excelência visual.</p>
+</div>
+<div class="hidden md:block">
+<span class="text-on-surface/40 font-label-md text-label-md uppercase tracking-widest">SCROLL TO EXPLORE</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<!-- Project 1: SaaS Dashboard -->
+<div class="project-card group relative glass-card p-4 rounded-xl transition-all duration-500 overflow-hidden">
+<div class="aspect-[16/10] overflow-hidden rounded-lg mb-6">
+<img alt="SaaS Dashboard" class="project-image w-full h-full object-cover transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZCfP9-vDcxUI9fFFmx2nodApDPpbJwEJRNcJ2AiEyRKq5QI9X2tqOtWF-bz6AWRRoghKd3tHEPliM8FX9YVO7o4DkwcOthJwcsZoVHRXlHzguLRUkNu7C2sG5lT279rtDa8AWrZAbf9237qMqbNIYNVaCAa3iSwyPujxF4YFnvmY0-l5_cChjgSo27NQdjW-ocDcJlzdyAGObJ0ihYD5QVz2a3oSzd4Tn7Kpmb2s_aa4XQamLagkyKu1_CeD9KMogIKVP_ZilzKE"/>
+</div>
+<div class="px-2">
+<div class="flex gap-2 mb-3">
+<span class="bg-white/5 px-3 py-1 rounded text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">SaaS</span>
+<span class="bg-white/5 px-3 py-1 rounded text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">DASHBOARD</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-2 group-hover:text-primary transition-colors">Nova Analytics Hub</h3>
+<p class="text-on-surface-variant font-body-md text-body-md mb-6">Interface de monitoramento de dados em tempo real com foco em legibilidade e arquitetura de componentes escaláveis.</p>
+<a class="inline-flex items-center gap-2 text-primary font-bold font-label-md text-label-md group" href="#">
+                            VIEW CASE STUDY
+                            <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Project 2: Eco-Track App -->
+<div class="project-card group relative glass-card p-4 rounded-xl transition-all duration-500 overflow-hidden">
+<div class="aspect-[16/10] overflow-hidden rounded-lg mb-6 relative">
+<img class="project-image w-full h-full object-cover transition-transform duration-700" data-alt="A high-tech digital application interface displayed on a sleek mobile device. The UI design features deep emerald greens and dark charcoal tones with glowing neon accents. It shows ecological data visualizations like carbon footprint charts and nature-themed iconography. The aesthetic is sophisticated, technical, and clean, reflecting a modern sustainable technology brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4jVG8lPTj7GHY2kUiOgjxeDsZPYE-EYKbw6yrB-gWyJ7UPdeFYnisXG3GuTOtugEwGcFqI3cMYDItKByBn1GdY4xf6Z85K-meMM1dmQZXqWougeDgvLQdrbqVcLBPzSCMngd_yYVqk8h5SBs9xYGP46X_wE3Cos6SHDVQCd3-56zwXmQ95cJjxO4aKOv159_e-cDHg5UVx63a6CU17wCgZIUT9CjI8773A17CSiNPdUeO0cByOjKM09DR6ep03TSgtml_-8fZ2Oo"/>
+<div class="absolute inset-0 bg-secondary-fixed/10 mix-blend-overlay"></div>
+</div>
+<div class="px-2">
+<div class="flex gap-2 mb-3">
+<span class="bg-white/5 px-3 py-1 rounded text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">MOBILE</span>
+<span class="bg-white/5 px-3 py-1 rounded text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">SUSTAINABILITY</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-2 group-hover:text-secondary-fixed transition-colors">Eco-Track App</h3>
+<p class="text-on-surface-variant font-body-md text-body-md mb-6">Plataforma móvel para monitoramento de pegada de carbono, utilizando gamificação e visualização de dados complexos.</p>
+<a class="inline-flex items-center gap-2 text-secondary-fixed font-bold font-label-md text-label-md group" href="#">
+                            VIEW CASE STUDY
+                            <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-section-gap bg-surface-container-lowest" id="about">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div class="order-2 md:order-1">
+<div class="grid grid-cols-2 gap-4">
+<div class="glass-card p-6 rounded-xl border-l-4 border-primary">
+<span class="material-symbols-outlined text-primary mb-4" data-weight="fill">code</span>
+<h4 class="font-bold mb-2">Frontend</h4>
+<p class="text-on-surface-variant text-sm">React, Next.js, Tailwind CSS, TypeScript</p>
+</div>
+<div class="glass-card p-6 rounded-xl border-l-4 border-secondary-fixed">
+<span class="material-symbols-outlined text-secondary-fixed mb-4" data-weight="fill">palette</span>
+<h4 class="font-bold mb-2">Design</h4>
+<p class="text-on-surface-variant text-sm">Figma, UI/UX, Prototipagem, Design Systems</p>
+</div>
+<div class="glass-card p-6 rounded-xl border-l-4 border-tertiary-container">
+<span class="material-symbols-outlined text-tertiary-container mb-4" data-weight="fill">bolt</span>
+<h4 class="font-bold mb-2">Performance</h4>
+<p class="text-on-surface-variant text-sm">Vitals, SEO, Optmização de ativos</p>
+</div>
+<div class="glass-card p-6 rounded-xl border-l-4 border-primary-fixed">
+<span class="material-symbols-outlined text-primary-fixed mb-4" data-weight="fill">terminal</span>
+<h4 class="font-bold mb-2">Tooling</h4>
+<p class="text-on-surface-variant text-sm">Git, CI/CD, AWS, Docker</p>
+</div>
+</div>
+</div>
+<div class="order-1 md:order-2">
+<span class="text-primary font-label-md text-label-md font-bold uppercase tracking-widest mb-4 block">Sobre Mim</span>
+<h2 class="font-headline-xl text-headline-xl mb-6">Expertise técnica com sensibilidade estética.</h2>
+<div class="space-y-4 text-on-surface-variant font-body-lg text-body-lg">
+<p>Acredito que o design não é apenas como algo se parece, mas como ele funciona e como faz o usuário se sentir. Com mais de 5 anos de experiência, foco em construir pontes entre o design visual e o código sólido.</p>
+<p>Meu processo é centrado no usuário, utilizando metodologias ágeis para transformar desafios complexos em soluções digitais intuitivas e de alto impacto.</p>
+</div>
+<div class="mt-8 flex items-center gap-4">
+<div class="h-px flex-1 bg-white/10"></div>
+<span class="font-label-md text-label-md text-on-surface/40">Sora &amp; Inter Design System</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="contact">
+<div class="glass-card rounded-3xl p-8 md:p-16 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none">
+<img class="w-full h-full object-cover" data-alt="A background abstract pattern of fluid dark gradients and flowing lines. The colors are deep navy, midnight blue, and subtle hints of charcoal. The style is minimalist and atmospheric, providing a professional and elegant backdrop for a contact form section without distracting from the primary content." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5a7PP5NUVeRg8Baksw7vSfS7JOqA1wdh5IvkWKRegAqP8JraJ6Ee8CnNSpxsU53p-X43ik7AA51Bc8Di5icv50k0p4B_0wyZ48ZPxAqb_CmLjLOvs5fWPGPfZ5lFpTv8-XVGYWzSekAwldklPJB3-Y26xQAerZ8_jYZW1Zhskj79ETgAQ2v2U7VDmZ6E9PujB7QZtT8fHuey7qTiuX4mfPRfeGjySjG-uTwJoBsIOffTpVZ6Qx6UXMGENVdyFTqUUn28oN5CwK7c"/>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 relative z-10">
+<div>
+<h2 class="font-headline-xl text-headline-xl mb-6">Vamos criar algo extraordinário?</h2>
+<p class="text-on-surface-variant font-body-lg text-body-lg mb-10">Estou sempre aberto a novos desafios e parcerias inovadoras. Entre em contato para discutirmos seu próximo projeto.</p>
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<p class="text-label-sm font-label-sm text-on-surface/40 uppercase">E-MAIL</p>
+<p class="font-bold">hello@creative.studio</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-secondary-fixed/10 flex items-center justify-center text-secondary-fixed">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div>
+<p class="text-label-sm font-label-sm text-on-surface/40 uppercase">LOCALIZAÇÃO</p>
+<p class="font-bold">Remoto / Worldwide</p>
+</div>
+</div>
+</div>
+<div class="mt-12 flex gap-4">
+<a class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/5 transition-colors" href="#">
+<img alt="LinkedIn" class="w-5 h-5 invert opacity-60" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqA73_0Q_LJsAPjq8uB2VEjivWApa_1076Hvva4ysju7c3Am_U66BKHNzNeEQfqLD6a_wTcnii7BRnITsZeNlQ6dyQvqU09vn6SWg_Q1p9uSsQnTL5zqC8oAgnEQVLm3ZxJffo7dRO2TAIPzSAV8kk3tsTQh2RfLiyK5nLpZjjUwoWBgPF8Y6Hy7fWI0y5da4N_djx-L9n5LMgEsmp6ubNHpEKZpryKpkewyl-ZYUBvmj1Fs026FTqGr45Mi7JAJEZY7GzsQ08R98"/>
+</a>
+<a class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/5 transition-colors" href="#">
+<img alt="GitHub" class="w-5 h-5 invert opacity-60" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgd69omXIdruN-8zvSuMNVVftV_0U9QjoGv5bFBjurJr9FDJ_jck_tNCcizCRcflWLah-fckuQzjjY0ZM4R7KqsUsjl7AML4RLV75tiQ6Pmm9SkvRcALlMP0sWdsAUhcXItx5SMiHRniU4Ze5aAfVjSw0JCNde_rrz_uveejnmK-BhFO7qmrxXks8iUdMJ5JP2idH-vzwTSW3PJseZ9Fep0IXAbLGMbLqgBnB6AV96N6Mgb9TztySMh1PgRBOtOrHdxybSpByzqog"/>
+</a>
+<a class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/5 transition-colors" href="#">
+<img alt="Twitter" class="w-5 h-5 invert opacity-60" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1gO8ZpFClYGiyBBJI7vN6_WcbWaoR3ZzKgpeQ9mZZOsDxIiR0Hfh0Lc-Qsx_Qc94E2WyzIbSG648vZ9XRxfydcbmDdHsBM3Dif356KKmsBOrpXouPh-NBQN5SyEwnCLhqDtHv9BHktsieAop3E9H0-tHJGuPWXvq_fiYzrKGNGENUezJkEN0aeE9QTZUIwYIxX01kq9pdvZu-8nfKRWbnqGD1lzZEX0FNOWhVEH7SK42GF6S2ihQEzlLQEzJQk8lcpbqawS2yZtg"/>
+</a>
+</div>
+</div>
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-on-surface/60 uppercase">Nome</label>
+<input class="w-full bg-surface-container-lowest border-0 border-b border-white/10 focus:ring-0 focus:border-primary transition-all p-4 rounded-t-lg" placeholder="Seu nome" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-on-surface/60 uppercase">E-mail</label>
+<input class="w-full bg-surface-container-lowest border-0 border-b border-white/10 focus:ring-0 focus:border-primary transition-all p-4 rounded-t-lg" placeholder="email@exemplo.com" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-on-surface/60 uppercase">Mensagem</label>
+<textarea class="w-full bg-surface-container-lowest border-0 border-b border-white/10 focus:ring-0 focus:border-primary transition-all p-4 rounded-t-lg resize-none" placeholder="Conte-me sobre seu projeto..." rows="4"></textarea>
+</div>
+<button class="w-full bg-primary-container text-on-primary-container py-5 rounded-xl font-bold uppercase tracking-widest hover:shadow-[0_0_20px_rgba(0,219,233,0.2)] transition-all" type="submit">
+                            Enviar Mensagem
+                        </button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-gap border-t border-white/5 bg-surface">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto gap-8">
+<div class="font-headline-md text-headline-md text-on-surface font-bold">Portfolio</div>
+<p class="font-body-md text-body-md text-on-surface-variant">© 2024 Creative Professional. Built with precision.</p>
+<div class="flex gap-8">
+<a class="text-on-surface-variant font-medium hover:text-secondary-fixed transition-colors" href="#">GitHub</a>
+<a class="text-on-surface-variant font-medium hover:text-secondary-fixed transition-colors" href="#">LinkedIn</a>
+<a class="text-on-surface-variant font-medium hover:text-secondary-fixed transition-colors" href="#">Twitter</a>
+</div>
+</div>
+</footer>
+<script>
+        // Simple scroll reveal effect for project cards
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.project-card').forEach(card => {
+            card.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-700');
+            observer.observe(card);
+        });
+
+        // Sticky Navbar shrink effect
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('py-2', 'shadow-2xl');
+                nav.classList.remove('py-4');
+            } else {
+                nav.classList.add('py-4');
+                nav.classList.remove('py-2', 'shadow-2xl');
+            }
+        });
+    </script>
+</body></html>
